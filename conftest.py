@@ -15,7 +15,8 @@ def driver():
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--log-level=3")
-    service = Service('../../../../CyberBionic_Test/chrome-win64/chrome-win64/chrome.exe')  # Вкажіть правильний шлях до chromedriver.exe
+    service = Service(
+        '../../../../CyberBionic_Test/chrome-win64/chrome-win64/chrome.exe')  # Вкажіть правильний шлях до chromedriver.exe
     driver = webdriver.Chrome(service=service, options=chrome_options)
     yield driver
     driver.quit()
